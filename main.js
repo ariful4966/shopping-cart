@@ -14,12 +14,16 @@ plusIcon.addEventListener("click", function(){
     const netTotalNumber = parseFloat(netTotal);
     const netTotalAmount = netTotalNumber + 1219;
 
+
+
     document.getElementById("netTotal").innerText = netTotalAmount;
     //Add  Mobail value grandTotal
     const grandTotal = document.getElementById("grandTotal").innerText;
     const grandTotalNumber = parseFloat(grandTotal);
     const grandTotalAmount = grandTotalNumber + 1219;
     document.getElementById("grandTotal").innerText = grandTotalAmount;
+
+
 
 
 })
@@ -44,6 +48,8 @@ minusIcon.addEventListener("click", function(){
     const grandTotalNumber = parseFloat(grandTotal);
     const grandTotalAmount = grandTotalNumber - 1219;
     document.getElementById("grandTotal").innerText = grandTotalAmount;
+
+  
 })
 
 // Last Item
@@ -68,6 +74,8 @@ plusIcon2.addEventListener("click", function(){
     const grandTotalNumber = parseFloat(grandTotal);
     const grandTotalAmount = grandTotalNumber + 59;
     document.getElementById("grandTotal").innerText = grandTotalAmount;
+
+    
 })
 //2nd Button
 const minusIcon2 = document.getElementById("minusIcon2");
@@ -89,4 +97,39 @@ minusIcon2.addEventListener("click", function(){
     const grandTotalNumber = parseFloat(grandTotal);
     const grandTotalAmount = grandTotalNumber -59;
     document.getElementById("grandTotal").innerText = grandTotalAmount;
+
+    
 })
+
+// Remove Item first
+const removeItem = document.getElementById("removeItem");
+removeItem.addEventListener("click", function(){
+    const cardItem = document.getElementById("cardItem");
+    cardItem.style.display = "none";
+
+    // Item Amount minus
+    const incrimentAmountRemove = document.getElementById("incrimentAmount").innerText;
+    const RemoveItemNumber = parseFloat(incrimentAmountRemove);
+    const netTotal = document.getElementById("netTotal").innerText;
+    const netTotalNumber = parseFloat(netTotal);
+    const netBalance = netTotalNumber - RemoveItemNumber;
+    document.getElementById("netTotal").innerText = netBalance;
+    document.getElementById("grandTotal").innerText = netBalance;
+});
+// Remove Item Second
+ const removeItemCasin = document.getElementById("removeItemCasin");
+removeItemCasin.addEventListener("click", function(){
+    const cardItemCasin = document.getElementById("cardItemCasin");
+    cardItemCasin.style.display = "none";
+
+    // Item Amount minus
+    const incrimentAmount2Remove = document.getElementById("incrimentAmount2").innerText;
+    const RemoveItemNumber2 = parseFloat(incrimentAmount2Remove);
+    const netTotal = document.getElementById("netTotal").innerText;
+    const netTotalNumber = parseFloat(netTotal);
+    const netBalance = netTotalNumber - RemoveItemNumber2;
+    document.getElementById("netTotal").innerText = netBalance;
+    document.getElementById("grandTotal").innerText = netBalance;
+})
+
+ 
